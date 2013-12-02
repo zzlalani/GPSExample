@@ -62,9 +62,6 @@ public class AddLocationService extends Service {
 		
 		instance = this;
 		
-		logGPS();
-		locHandler.postDelayed(locRunnable, postDelayed);
-		
 	}
 
 	@Override
@@ -85,6 +82,10 @@ public class AddLocationService extends Service {
 	            
 	        }
 	    };
+	    
+	    logGPS();
+	    
+	    locHandler.postDelayed(locRunnable, postDelayed);
 		
 	}
 
